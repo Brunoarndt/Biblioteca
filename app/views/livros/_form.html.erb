@@ -1,0 +1,25 @@
+<%= form_with model: @livro, local: true do |form| %>
+  <div class="mb-3">
+    <%= form.label :titulo, class: "block text-gray-700 font-medium" %>
+    <%= form.text_field :titulo, class: "mt-1 block w-full border border-gray-400 rounded-lg shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-600 p-2" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :autor, class: "block text-gray-700 font-medium" %>
+    <%= form.text_field :autor, class: "mt-1 block w-full border border-gray-400 rounded-lg shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-600 p-2" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :ano, class: "block text-gray-700 font-medium" %>
+    <%= form.text_field :ano, class: "mt-1 block w-full border border-gray-400 rounded-lg shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-600 p-2" %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :genero, class: "block text-gray-700 font-medium" %>
+    <%= form.text_field :genero, class: "mt-1 block w-full border border-gray-400 rounded-lg shadow-md focus:ring-2 focus:ring-blue-500 focus:border-blue-600 p-2" %>
+  </div>
+
+  <div>
+    <%= form.submit "Salvar", class: "w-full bg-green-500 text-white py-2 rounded hover:bg-green-600" %>
+  </div>
+<% end %>

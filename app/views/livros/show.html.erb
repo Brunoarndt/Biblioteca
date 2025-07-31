@@ -1,0 +1,19 @@
+<div class="max-w-2xl mx-auto mt-10 bg-white border border-gray-300 shadow-lg rounded-lg hover:shadow-xl hover:bg-gray-50 transition p-6">
+  <h1 class="text-3xl mb-4 text-gray-800"><%= @livro.titulo %></h1>
+
+  <div class="flex gap-3 mb-4">
+    <%= link_to livros_path, class: "flex items-center gap-2 text-gray-700 hover:text-gray-900 font-medium" do %>
+      ← Voltar
+    <% end %>
+
+
+    <% if authenticated? %>
+      <%= link_to "Editar", edit_livro_path(@livro), class: "bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" %>
+
+      <%= button_to "Deletar", @livro, method: :delete,
+            data: { turbo_confirm: "Você realmente deseja deletar este livro?" },
+            class: "px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600" %>
+    <% end %>
+    
+  </div>
+</div>
