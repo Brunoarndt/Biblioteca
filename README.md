@@ -31,10 +31,10 @@ psql --version
 ```
 
 ## Clonando o Projeto
-
+```bash
 git clone https://github.com/Brunoarndt/biblioteca.git
 cd biblioteca
-
+```
 ## Instalando Dependências
 
 Instale as Gems
